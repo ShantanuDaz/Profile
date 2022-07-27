@@ -1,0 +1,118 @@
+header {
+  height: 100vh;
+  position: relative;
+  display: grid;
+}
+.info {
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+.glass {
+  background: rgb(124 7 244 / 13%);
+  box-shadow: 0 0px 13px 0 rgb(124 7 244);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.profilePic {
+  width: min(50%, 225px);
+  aspect-ratio: 1/1;
+  margin: auto;
+  background-image: url("../Assets/image/Profile photo.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  animation: appear 1s linear forwards, backLight 1s 1s linear forwards,
+    bounce 4s 7s linear infinite forwards;
+}
+
+.info > h1 {
+  width: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  text-shadow: 2px 3px 0px rgb(124 7 244);
+  font-size: max(2.5vw, 24px);
+  animation: typing 3.5s 2s steps(37) forwards;
+}
+.info > p {
+  text-align: center;
+  padding: 20px;
+  font-size: max(4vw, 40px);
+  transform: scale(0);
+  opacity: 0;
+  animation: appear 1s 4s linear forwards, lightBounce 2s 5s linear forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes backLight {
+  from {
+    box-shadow: 0 0 0 0 white;
+  }
+  to {
+    box-shadow: 0 0px 20px 0 rgb(124 7 244);
+  }
+}
+
+@keyframes lightBounce {
+  0%,
+  20%,
+  50%,
+  80% {
+    text-shadow: 0 0 white;
+  }
+  40% {
+    text-shadow: 0px 0px 10px white;
+  }
+  60% {
+    text-shadow: 0px 0px 15px white;
+  }
+  100% {
+    text-shadow: 0px 0px 27px white;
+  }
+}
