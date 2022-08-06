@@ -1,4 +1,4 @@
-header {
+section {
   height: 100vh;
   position: relative;
   display: grid;
@@ -11,10 +11,10 @@ header {
 }
 
 .glass {
-  background: rgb(124 7 244 / 13%);
-  box-shadow: 0 0px 13px 0 rgb(124 7 244);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgb(124 7 244 / 13%);
+  /* box-shadow: 0 0px 13px 0 rgb(124 7 244); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -45,6 +45,14 @@ header {
   font-size: max(2.5vw, 24px);
   animation: typing 3.5s 2s steps(37) forwards;
 }
+@media screen and (max-width: 480px) {
+  .info > h1 {
+    width: 100%;
+    animation: appear 3.5s 1s ease-in forwards;
+    white-space: inherit;
+    opacity: 0;
+  }
+}
 .info > p {
   text-align: center;
   padding: 20px;
@@ -53,7 +61,27 @@ header {
   opacity: 0;
   animation: appear 1s 4s linear forwards, lightBounce 2s 5s linear forwards;
 }
+nav {
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-around;
+  padding: 30px;
+}
 
+nav > button {
+  all: unset;
+  width: 20%;
+  padding: 19px 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  animation: appear2 1s 8s linear forwards,
+    bounce 4s 7s linear infinite forwards;
+}
+nav > button:hover {
+  box-shadow: 0 0 10px 5px white;
+}
 @keyframes bounce {
   0% {
     transform: translateY(0px);
@@ -82,6 +110,14 @@ header {
     opacity: 1;
   }
 }
+@keyframes appear2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes typing {
   0% {
     width: 0;
@@ -95,7 +131,7 @@ header {
     box-shadow: 0 0 0 0 white;
   }
   to {
-    box-shadow: 0 0px 20px 0 rgb(124 7 244);
+    box-shadow: 0 0px 20px 8px white;
   }
 }
 
@@ -113,6 +149,6 @@ header {
     text-shadow: 0px 0px 15px white;
   }
   100% {
-    text-shadow: 0px 0px 27px white;
+    text-shadow: 2px 3px 27px white, -2px -3px 27px white;
   }
 }
