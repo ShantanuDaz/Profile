@@ -11,16 +11,16 @@ const Header = () => {
           <h1>"Hello World" My Name Is Shantanu Das</h1>
           <p>Trying To Build Future But Not Just For Me</p>
           <nav>
-            <button className="glass" style={{ [`--i`]: "1s" }}>
+            <button className="glass" style={{ [`--i`]: "0s" }}>
               Projects
             </button>
-            <button className="glass" style={{ [`--i`]: "2s" }}>
+            <button className="glass" style={{ [`--i`]: ".5s" }}>
               Skills
             </button>
-            <button className="glass" style={{ [`--i`]: "3s" }}>
+            <button className="glass" style={{ [`--i`]: ".75s" }}>
               About
             </button>
-            <button className="glass" style={{ [`--i`]: "4s" }}>
+            <button className="glass" style={{ [`--i`]: "1s" }}>
               Contact
             </button>
           </nav>
