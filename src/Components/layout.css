@@ -103,7 +103,7 @@ nav > button:hover {
   .showNav > button {
     width: 100%;
     opacity: 1;
-    animation: bounce 4s calc(7s + var(--i)) linear infinite forwards;
+    animation: bounce 4s calc(var(--i)) linear infinite forwards;
   }
 }
 
