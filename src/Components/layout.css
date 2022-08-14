@@ -1,7 +1,7 @@
 section {
   height: 100vh;
   position: relative;
-  display: grid;
+  display: flex;
 }
 .info {
   width: 95%;
@@ -48,7 +48,7 @@ section {
 
 .info > p {
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
   font-size: max(4vw, 40px);
   transform: scale(0);
   opacity: 0;
@@ -78,7 +78,10 @@ nav > button:hover {
 .menu {
   display: none;
 }
-@media screen and (max-width: 700px) {
+.navs {
+  height: 95%;
+}
+@media screen and (max-width: 1000px) {
   .info > h1 {
     width: 100%;
     animation: appear 3.5s 1s ease-in forwards;
@@ -91,25 +94,28 @@ nav > button:hover {
   .menu {
     display: block;
     background-image: url("../Assets/image/menu.svg");
+    background-repeat: no-repeat;
     width: 30px;
     aspect-ratio: 1/1;
     cursor: pointer;
   }
-  .showNav {
-    display: grid;
-    height: 100%;
-    align-items: center;
-  }
-  .showNav > button {
-    width: 100%;
-    opacity: 1;
-    animation: bounce 4s calc(var(--i)) linear infinite forwards;
-  }
+}
+
+.showNav {
+  display: grid;
+  height: 100%;
+  align-items: center;
+}
+.showNav > button {
+  width: 100%;
+  opacity: 1;
+  animation: bounce 4s calc(var(--i)) linear infinite forwards;
 }
 
 .modal {
   position: fixed;
   inset: 0;
+  z-index: 100;
   background-color: #d3d3d378;
 }
 /* animations */

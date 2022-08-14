@@ -1,0 +1,42 @@
+header {
+  height: 8%;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+header > div:hover {
+  text-shadow: 0 0 20px white;
+}
+header > p {
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+.menu2 {
+  display: block;
+  background-image: url("../../Assets/image/menu.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.home {
+  display: block;
+  background-image: url("../../Assets/image/home.svg");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 90%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.home:hover {
+  filter: drop-shadow(0px 0px 4px white);
+}
+.menu2:hover {
+  filter: drop-shadow(0px 0px 4px white);
+}
