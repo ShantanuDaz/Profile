@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import Modal from "../modal/Modal";
 import "./skillCard.css";
-const SkillCard = ({ name, value }) => {
+const SkillCard = ({ name = "", value = 0, description = "" }) => {
   const [progress, setProgress] = useState(0);
   const [color, setColor] = useState("");
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     move(value);
     getRandomColor();
@@ -30,19 +32,42 @@ const SkillCard = ({ name, value }) => {
     }
   }
   return (
-    <div className="skillCard glass">
-      <p>{name}</p>
-      <div
-        style={{
-          // eslint-disable-next-line
-          ["--widthValue"]: `${progress}%`,
-          backgroundColor: color,
-        }}
-        className="skillValue"
-      >
-        {progress}
+    <>
+      <div className="skillCard glass" onClick={() => setOpen(true)}>
+        <p>{name}</p>
+        <div
+          style={{
+            // eslint-disable-next-line
+            ["--widthValue"]: `${progress}%`,
+            backgroundColor: color,
+          }}
+          className="skillValue"
+        >
+          {progress}
+        </div>
       </div>
-    </div>
+      <Modal
+        open={open}
+        close={() => {
+          setOpen(false);
+        }}
+      >
+        <div className="skillDesc glass">
+          <p>{name}</p>
+          <div
+            style={{
+              // eslint-disable-next-line
+              ["--widthValue"]: `${progress}%`,
+              backgroundColor: color,
+            }}
+            className="skillValue"
+          >
+            {progress}
+          </div>
+          {description}
+        </div>
+      </Modal>
+    </>
   );
 };
 

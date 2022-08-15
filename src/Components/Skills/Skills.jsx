@@ -7,7 +7,12 @@ const Skills = () => {
     {
       name: "Frontend",
       skills: [
-        { name: "HTML", value: 80 },
+        {
+          name: "HTML",
+          value: 80,
+          description:
+            "It is the langauage of web, the markup which make the elments in Web",
+        },
         { name: "CSS", value: 70 },
         { name: "JavaScript", value: 60 },
         { name: "ReactJS", value: 60 },
@@ -42,8 +47,15 @@ const Skills = () => {
           return (
             <div key={index} className="skillCatergory">
               <h2>{item.name}</h2>
-              {item.skills.map((skill) => {
-                return <SkillCard name={skill.name} value={skill.value} />;
+              {item.skills.map((skill, index2) => {
+                return (
+                  <SkillCard
+                    key={index2}
+                    name={skill.name}
+                    value={skill.value}
+                    description={skill.description}
+                  />
+                );
               })}
             </div>
           );

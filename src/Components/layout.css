@@ -117,6 +117,7 @@ nav > button:hover {
   inset: 0;
   z-index: 100;
   background-color: #d3d3d378;
+  display: grid;
 }
 /* animations */
 @keyframes bounce {
