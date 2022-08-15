@@ -7,7 +7,7 @@ const SkillCard = ({ name, value }) => {
   useEffect(() => {
     move(value);
     getRandomColor();
-  }, []);
+  }, [value]);
   const getRandomColor = () => {
     var letters = "0123456789ABCDEF";
     var color = "#";
@@ -34,6 +34,7 @@ const SkillCard = ({ name, value }) => {
       <p>{name}</p>
       <div
         style={{
+          // eslint-disable-next-line
           ["--widthValue"]: `${progress}%`,
           backgroundColor: color,
         }}
