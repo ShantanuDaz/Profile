@@ -10,15 +10,6 @@ section {
   padding: 20px;
 }
 
-.glass {
-  background-color: rgb(124 7 244 / 13%);
-  /* box-shadow: 0 0px 13px 0 rgb(124 7 244); */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
 .profilePic {
   width: min(50%, 225px);
   aspect-ratio: 1/1;
@@ -33,8 +24,22 @@ section {
   animation: appear 1s linear forwards, backLight 1s 1s linear forwards,
     bounce 4s 7s linear infinite forwards;
 }
+.profilePicLoaded {
+  width: min(50%, 225px);
+  aspect-ratio: 1/1;
+  margin: auto;
+  background-image: url("../Assets/image/Profile photo.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 0px 20px 8px white;
+  animation: bounce 4s 7s linear infinite forwards;
+}
 
-.info > h1 {
+.title {
   width: 0px;
   white-space: nowrap;
   overflow: hidden;
@@ -45,14 +50,30 @@ section {
   font-size: max(2.5vw, 24px);
   animation: typing 3.5s 2s steps(37) forwards;
 }
-
-.info > p {
+.titleLoaded {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   text-align: center;
-  /* padding: 20px; */
+  margin: auto;
+  margin-top: 20px;
+  text-shadow: 2px 3px 0px rgb(124 7 244);
+  font-size: max(2.5vw, 24px);
+}
+
+.tagLine {
+  text-align: center;
   font-size: max(4vw, 40px);
   transform: scale(0);
   opacity: 0;
   animation: appear 1s 4s linear forwards, lightBounce 2s 5s linear forwards;
+}
+.tagLineLoaded {
+  text-align: center;
+  font-size: max(4vw, 40px);
+  transform: scale(1);
+  opacity: 1;
+  text-shadow: 2px 3px 27px white, -2px -3px 27px white;
 }
 nav {
   display: flex;
@@ -61,7 +82,7 @@ nav {
   padding: 30px;
 }
 
-nav > button {
+.navOptions {
   all: unset;
   width: 20%;
   padding: 19px 5px;
@@ -71,6 +92,15 @@ nav > button {
   opacity: 0;
   animation: appear2 1s 8s linear forwards,
     bounce 4s calc(7s + var(--i)) linear infinite forwards;
+}
+.navOptionsLoaded {
+  all: unset;
+  width: 20%;
+  padding: 19px 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  animation: bounce 4s calc(0s + var(--i)) linear infinite forwards;
 }
 nav > button:hover {
   box-shadow: 0 0 10px 5px white;
@@ -82,7 +112,7 @@ nav > button:hover {
   height: 95%;
 }
 @media screen and (max-width: 1000px) {
-  .info > h1 {
+  .title {
     width: 100%;
     animation: appear 3.5s 1s ease-in forwards;
     white-space: inherit;
@@ -189,4 +219,12 @@ nav > button:hover {
   100% {
     text-shadow: 2px 3px 27px white, -2px -3px 27px white;
   }
+}
+.glass {
+  background-color: rgb(124 7 244 / 13%);
+  /* box-shadow: 0 0px 13px 0 rgb(124 7 244); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

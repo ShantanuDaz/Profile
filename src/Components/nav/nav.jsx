@@ -12,7 +12,7 @@ const Nav = ({ open, setOpen }) => {
               e.stopPropagation();
               navigate("/projects");
             }}
-            className="glass"
+            className="navOptions glass"
             style={{ [`--i`]: "0.25s" }}
           >
             Projects
@@ -22,21 +22,21 @@ const Nav = ({ open, setOpen }) => {
               e.stopPropagation();
               navigate("/skills");
             }}
-            className="glass"
+            className="navOptions glass"
             style={{ [`--i`]: "0.5s" }}
           >
             Skills
           </button>
           <button
             onClick={(e) => e.stopPropagation()}
-            className="glass"
+            className="navOptions glass"
             style={{ [`--i`]: ".75s" }}
           >
             About
           </button>
           <button
             onClick={(e) => e.stopPropagation()}
-            className="glass"
+            className="navOptions glass"
             style={{ [`--i`]: "1s" }}
           >
             Contact
