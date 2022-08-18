@@ -134,7 +134,8 @@ nav > button:hover {
     cursor: pointer;
   }
   .info {
-    display: grid;
+    display: flex;
+    flex-direction: column;
   }
 }
 

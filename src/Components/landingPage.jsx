@@ -42,6 +42,7 @@ const Header = () => {
         <button
           className={loaded ? "navOptionsLoaded glass" : "navOptions glass"}
           style={{ [`--i`]: ".75s" }}
+          onClick={() => navigate("./about")}
         >
           About
         </button>
