@@ -36,7 +36,7 @@ section {
   transform: scale(1);
   opacity: 1;
   box-shadow: 0 0px 20px 8px white;
-  animation: bounce 4s 7s linear infinite forwards;
+  animation: bounce 4s linear infinite forwards;
 }
 
 .title {
