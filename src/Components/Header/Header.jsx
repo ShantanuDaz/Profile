@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Nav from "../nav/nav";
-const Header = ({ name }) => {
+const Header = () => {
+  let loacation = useLocation();
   const [open, setOpen] = useState(false);
   let navigate = useNavigate();
   return (
-    <header>
-      <div className="menu2" onClick={() => setOpen(true)}></div>
-      <p>{name}</p>
-      <div onClick={() => navigate("/")} className="home"></div>
+    <header className="header">
+      <div className="menu2 icon" onClick={() => setOpen(true)}></div>
+      <p>{loacation.pathname.replace("/", "")}</p>
+      <div onClick={() => navigate("/")} className="home icon"></div>
       <Nav open={open} setOpen={(e) => setOpen(e)} />
     </header>
   );

@@ -41,7 +41,7 @@ const Skills = () => {
   ];
   return (
     <>
-      <Header name="Skills" />
+      <Header />
       <div className="skills">
         {skills.map((item, index) => {
           return (

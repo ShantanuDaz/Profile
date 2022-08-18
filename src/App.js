@@ -1,6 +1,6 @@
 import React from "react";
 import LandingPage from "./Components/landingPage";
-import Projects from "./Components/Projects";
+import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import { Routes, Route } from "react-router-dom";
 function App() {

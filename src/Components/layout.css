@@ -118,6 +118,10 @@ nav > button:hover {
     white-space: inherit;
     opacity: 0;
   }
+  .titleLoaded {
+    width: 100%;
+    white-space: inherit;
+  }
   nav {
     display: none;
   }
@@ -128,6 +132,9 @@ nav > button:hover {
     width: 30px;
     aspect-ratio: 1/1;
     cursor: pointer;
+  }
+  .info {
+    display: grid;
   }
 }
 
