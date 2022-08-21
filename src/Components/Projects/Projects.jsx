@@ -9,41 +9,6 @@ const Projects = () => {
       img: "",
       description: "A place to bug anything",
     },
-    {
-      name: "SabKuch1.com",
-      img: "",
-      description: "A place to bug anything",
-    },
-    {
-      name: "SabKuch2.com",
-      img: "",
-      description: "A place to bug anything",
-    },
-    {
-      name: "SabKuch.com",
-      img: "",
-      description: "A place to bug anything",
-    },
-    {
-      name: "SabKuch.com",
-      img: "",
-      description: "A place to bug anything",
-    },
-    {
-      name: "SabKuch.com",
-      img: "",
-      description: "A place to bug anything",
-    },
-    {
-      name: "SabKuch.com",
-      img: "",
-      description: "A place to bug anything",
-    },
-    {
-      name: "SabKuch.com",
-      img: "",
-      description: "A place to bug anything",
-    },
   ];
 
   return (
@@ -54,6 +19,7 @@ const Projects = () => {
           return (
             <div key={index} className="glass">
               <p>{item.name}</p>
+              <p>{item.description}</p>
             </div>
           );
         })}
